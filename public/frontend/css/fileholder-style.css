@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/*
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+*/
+
+:root {
+    --medium-persian-blue: #090979;
+    --bluish-purple: #7248B9;
+    --dark-grey: #3B3B3B;
+    --white: #ffffff;
+    --black: #000000;
+    --base-color: #15C39A;
+    --fileholder-padding: 20px;
+    --fileholder-drop-text-color: #15C39A; 
+    --fileholder-danger: #FF3C41;
+}
+
+
+.fileholder {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    overflow: hidden;
+}
+
+.fileholder.active {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    border: 2px dashed var(--base-color);
+    padding: var(--fileholder-padding);
+    position: relative;
+}
+
+.fileholder.drag-over {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    border-color: transparent;
+    box-shadow: rgb(204, 219, 232) 0px 0px 10px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+}
+
+
+.fileholder.active .fileholder-drag-drop-box{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.fileholder-content {
+    position: relative;
+}
+
+.fileholder-drag-drop-box {
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+
+.fileholder.drag-over .fileholder-drag-drop-box{
+    transform: translateY(-150%);
+    -webkit-transform: translateY(-150%);
+    -moz-transform: translateY(-150%);
+    -ms-transform: translateY(-150%);
+    -o-transform: translateY(-150%);
+}
+
+.fileholder-drag-drop-icon {
+    max-width: 40px;
+    margin: auto;
+}
+
+.fileholder-underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fileholder-drag-drop-title {
+    font: 600 14px/17px 'Ubuntu', sans-serif;
+    letter-spacing: 0.5px;
+    color: var(--dark-grey);
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+input.file-holder {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* FileHolder Drop Text Design START */
+.fileholder-drop-text-wrp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.fileholder-drop-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font: 600 18px/18px 'Ubuntu', sans-serif;
+    color: var(--fileholder-drop-text-color);
+}
+
+.fileholder.drag-over .fileholder-drop-text-wrp {
+    opacity: 1;
+    visibility: visible;
+}
+/* FileHolder Drop Text Design END */
+
+
+/* FileHolder Load Image View Design START */
+.fileholder-files-view-wrp {
+    z-index: 9999;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    /* margin-top: 20px; */
+}
+
+
+.fileholder-single-file-view {
+    position: relative;
+    min-width: 150px;
+    width: calc((100% - (15px * 7)) / 8);
+    height: 180px;
+    padding: 5px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    overflow: hidden;
+}
+
+.fileholder-files-view-wrp.accept-single-file .fileholder-single-file-view {
+    width: 100%;
+}
+
+.fileholder-image-box {
+    height: calc(100% - 60px);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.fileholder-border__base {
+    border: 1px solid var(--base-color);
+}
+
+.fileholder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.fileholder-image.fade {
+    transition: 1s;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+/* FileHolder Load Image View Design END */
+
+
+/* FileHolder Basic Loading Design START */
+.fileholder-basic-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.fileholder-basic-loading-circle.one {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid #D9EEE1;
+    border-radius: 50%;
+    transform: scale(0);
+    animation-name: filaHolderBasicLoadingAnimation;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+.fileholder-basic-loading-circle.two {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid #81dda4;
+    border-radius: 50%;
+    animation-name: filaHolderBasicLoadingAnimation;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.fileholder-basic-loading-circle.three {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid #43da7d;
+    border-radius: 50%;
+    animation-name: filaHolderBasicLoadingAnimation;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.fileholder-basic-loading-circle.four {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid #10d85d;
+    border-radius: 50%;
+    animation-name: filaHolderBasicLoadingAnimation;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes filaHolderBasicLoadingAnimation {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(30);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.fileholder-basic-hide {
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fileholder-basic-show {
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    visibility: visible;
+    opacity: 1;
+}
+/* FileHolder Basic Loading Design END */
+
+
+/* FileHolder Single File Footer Design START */
+.fileholder-progress-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fileholder-total-size__loaded {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fileholder-file-title {
+    font: 600 11px/11px 'Ubuntu', sans-serif;
+    margin-top: 6px;
+    color: var(--dark-grey);
+}
+
+.fileholder-file-total-size, .fileholder-file-total-loaded,.fileholder-file-loaded-percentage {
+    font: 600 10px/10px 'Ubuntu', sans-serif;
+    color: var(--dark-grey);
+}
+
+.fileholder-file-loaded-percentage {
+    font-weight: bold;
+}
+
+.fileholder-progess-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 50px;
+    border: 1px solid var(--base-color);
+    margin: 6px 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.fileholder-progress-bar-inner {
+    width: 0%;
+    height: 100%;
+    background-color: var(--base-color);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.fileholder-show {
+    visibility: visible;
+    opacity: 1;   
+}
+/* FileHolder Single File Footer Design END */
+
+
+/* FileHolder Single File Buttons Design START */
+.fileholder-single-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.fileholder-file-remove-button, .fileholder-preview-file-remove-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: var(--fileholder-danger);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    cursor: pointer;
+}
+
+.fileholder-single-file-view:hover .fileholder-file-remove-button, .fileholder-single-file-view:hover .fileholder-preview-file-remove-button {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.fileholder-file-remove-button svg, .fileholder-preview-file-remove-button svg {
+    fill: var(--white);
+    fill-rule:nonzero;
+}
+/* FileHolder Single File Buttons Design END */
+
+
+
+/* FileHolder Responsive START */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .fileholder-files-view-wrp {
+        justify-content: center;
+    }
+    .fileholder-single-file-view {
+        width: calc((100% - (15px * 2)) / 1);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .fileholder-single-file-view {
+        width: calc((100% - (15px * 3)) / 2);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .fileholder-single-file-view {
+        width: calc((100% - (15px * 4)) / 3);
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .fileholder-single-file-view {
+        width: calc((100% - (15px * 6)) / 5);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .fileholder-single-file-view {
+        width: calc((100% - (15px * 8)) / 7);
+    }
+}
+
+/* FileHolder Responsive END */
+
+.fileholder-perview-single .fileholder-single-file-view {
+    width: 100%;
+}
+
+.fileholder-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

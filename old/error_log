@@ -1,0 +1,147 @@
+[21-May-2026 07:22:10 UTC] PHP Warning:  syntax error, unexpected '=' in /home/interexi/public_html/core/.env on line 3
+ in /home/interexi/public_html/test.php on line 81
+[22-May-2026 16:12:06 UTC] PHP Warning:  Undefined variable $countries in /home/interexi/public_html/te.php on line 132
+[22-May-2026 16:12:06 UTC] PHP Warning:  Undefined variable $countries in /home/interexi/public_html/te.php on line 135
+[22-May-2026 16:33:25 UTC] PHP Warning:  file_put_contents(/home/interexi/public_html/storage/logs/test_20260522_163325.log): Failed to open stream: No such file or directory in /home/interexi/public_html/te.php on line 407
+[22-May-2026 17:34:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/interexi/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home/interexi/public_html/te.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/interexi/public_html/te.php on line 6
+[22-May-2026 17:34:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/interexi/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home/interexi/public_html/te.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/interexi/public_html/te.php on line 6
+[22-May-2026 17:35:16 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:15 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:45 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:46 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:46 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:46 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:46 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:47 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:47 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:47 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:47 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:47 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:48 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:48 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:48 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:48 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:48 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:49 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:49 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:49 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:49 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:49 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:50 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:50 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:50 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:50 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:50 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:50 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:51 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:51 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:51 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:51 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:51 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:52 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:52 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:52 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:52 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:52 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:52 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:53 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:53 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:53 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:53 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:53 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:54 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:54 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:54 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:54 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:55 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:55 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:55 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:55 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:55 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:55 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:56 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:56 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:56 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:56 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:56 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:56 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:57 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:57 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:57 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:57 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:57 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:58 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:58 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:58 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:58 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:58 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:59 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:59 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:59 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:59 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:59 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:36:59 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:00 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:00 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:00 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:00 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:00 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:00 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:01 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:01 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:01 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:01 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:01 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:02 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:02 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:02 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:02 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:02 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:03 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:03 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:03 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:03 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:03 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:03 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:04 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:04 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:04 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:04 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:04 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:05 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:05 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:05 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:05 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:06 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:06 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:06 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:06 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:06 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:07 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:07 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:07 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:07 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:07 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:08 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:08 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:08 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:08 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:08 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:09 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:09 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:09 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:09 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:09 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:10 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:10 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:10 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:10 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:10 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:11 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
+[22-May-2026 17:37:11 UTC] PHP Notice:  ob_flush(): Failed to flush buffer. No buffer to flush in /home/interexi/public_html/te.php on line 296
