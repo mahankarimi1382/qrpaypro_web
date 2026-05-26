@@ -2,36 +2,52 @@
 
 namespace App\Http\Controllers\Admin\Auth;
 
-use App\Constants\ExtensionConst;
-use App\Constants\NotificationConst;
-use App\Events\Admin\NotificationEvent;
 use App\Http\Controllers\Controller;
-use App\Http\Helpers\PushNotificationHelper;
-use App\Models\Admin\AdminLoginLogs;
-use App\Models\Admin\AdminNotification;
-use App\Providers\Admin\ExtensionProvider;
-use Carbon\Carbon;
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
-use Jenssegers\Agent\Agent;
 
 class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
     /**
-     * Display The Amdin Login From Page
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/admin/dashboard';
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest:admin')->except('logout');
+    }
+
+    /**
+     * Display The Admin Login Form Page
      *
      * @return view
      */
-    public function showLoginForm() {
+    public function showLoginForm() 
+    {
         return view('admin.auth.login');
     }
 
-
+    /**
+     * Get the guard to be used during authentication.
+     *
+     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     */
+    protected function guard()
+    {
+        return Auth::guard('admin');
+    }
 
     /**
      * Validate the user login request.
@@ -43,27 +59,24 @@ class LoginController extends Controller
      */
     protected function validateLogin(Request $request)
     {
-        $extension = ExtensionProvider::get()->where('slug', ExtensionConst::GOOGLE_RECAPTCHA_SLUG)->first();
-        $captcha_rules = "nullable";
-        if($extension && $extension->status == true) {
-            $captcha_rules = 'required|string|g_recaptcha_verify';
-        }
         $request->validate([
-            'email'                => 'required|string',
-            'password'             => 'required|string',
-            'g-recaptcha-response'  => $captcha_rules
+            'email'    => 'required|string|email',
+            'password' => 'required|string',
         ]);
     }
 
     /**
-     * Get The Authenticated User Guard
-     * @return instance
+     * Get the needed authorization credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
      */
-    protected function guard()
+    protected function credentials(Request $request)
     {
-        return Auth::guard('admin');
+        $credentials = $request->only($this->username(), 'password');
+        $credentials['status'] = true;
+        return $credentials;
     }
-
 
     /**
      * The user has been authenticated.
@@ -74,63 +87,19 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        $user->update([
-            'two_factor_verified'   => false,
-        ]);
-        $this->createLoginLog($user);
-        $this->updateInfo($user);
+        // فقط آپدیت ساده بدون سرویس خارجی
+        try {
+            $user->update([
+                'last_logged_in' => now(),
+                'login_status'   => true,
+                'two_factor_verified' => false,
+            ]);
+        } catch (\Exception $e) {
+            // اگر خطا داشت فقط لاگین انجام بشه
+        }
+        
         return redirect()->intended(route('admin.dashboard'));
     }
-
-
-    protected function createLoginLog($admin) {
-
-        $client_ip = request()->ip() ?? false;
-        $location = geoip()->getLocation($client_ip);
-
-        $agent = new Agent();
-
-        // $mac = exec('getmac');
-        // $mac = explode(" ",$mac);
-        // $mac = array_shift($mac);
-        $mac = "";
-
-        $data = [
-            'admin_id'      => $admin->id,
-            'ip'            => $client_ip,
-            'mac'           => $mac,
-            'city'          => $location['city'] ?? "",
-            'country'       => $location['country'] ?? "",
-            'longitude'     => $location['lon'] ?? "",
-            'latitude'      => $location['lat'] ?? "",
-            'timezone'      => $location['timezone'] ?? "",
-            'browser'       => $agent->browser() ?? "",
-            'os'            => $agent->platform() ?? "",
-        ];
-
-        try{
-            AdminLoginLogs::create($data);
-            $notification_message = [
-                'title'   => $admin->fullname . "(" . $admin->username . ")" . " logged in.",
-                'time'      => Carbon::now()->diffForHumans(),
-                'image'     => get_image($admin->image,'admin-profile'),
-            ];
-            AdminNotification::create([
-                'type'      => NotificationConst::SIDE_NAV,
-                'admin_id'  => $admin->id,
-                'message'   => $notification_message,
-            ]);
-            // event(new NotificationEvent($notification_message));
-            (new PushNotificationHelper())->prepare([$admin->id],[
-                'title' => $admin->fullname . "(" . $admin->username . ")" . " logged in.",
-                'desc'  => "",
-                'user_type' => 'admin',
-            ])->send();
-        }catch(Exception $e) {
-            // return false;
-        }
-    }
-
 
     /**
      * Get the failed login response instance.
@@ -143,32 +112,32 @@ class LoginController extends Controller
     protected function sendFailedLoginResponse(Request $request)
     {
         throw ValidationException::withMessages([
-            'credential' => [trans('auth.failed')],
+            'email' => [trans('auth.failed')],
         ]);
     }
 
-
-    protected function updateInfo($admin) {
-        try{
-            $admin->update([
-                'last_logged_in'    => now(),
-                'login_status'      => true,
-            ]);
-        }catch(Exception $e) {
-            // handle error
-        }
-    }
-
-
     /**
-     * Get the needed authorization credentials from the request.
+     * Log the user out of the application.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return array
+     * @return \Illuminate\Http\Response
      */
-    protected function credentials(Request $request)
+    public function logout(Request $request)
     {
-        $request->merge(['status' => true]);
-        return $request->only($this->username(), 'password','status');
+        $this->guard()->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        
+        return redirect('/admin/login');
+    }
+
+    /**
+     * Get the login username to be used by the controller.
+     *
+     * @return string
+     */
+    public function username()
+    {
+        return 'email';
     }
 }
