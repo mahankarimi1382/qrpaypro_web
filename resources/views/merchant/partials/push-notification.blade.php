@@ -1,5 +1,5 @@
 @if ($basic_settings->push_notification_config != null && $basic_settings->push_notification_config->method == 'pusher')
-    <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
+    <script src="{{ asset('frontend/js/push-notifications.js') }}"></script>
     <script>
         var clientInstanceId = "{{ $basic_settings->push_notification_config->instance_id }}";
         const beamsClient = new PusherPushNotifications.Client({
@@ -24,7 +24,7 @@
 @endif
 
 @if ($basic_settings->broadcast_config != null && $basic_settings->broadcast_config->method == 'pusher')
-    <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+<script src="{{ asset('frontend/js/pusher.min.js') }}"></script>
     <script>
         // Enable pusher logging - don't include this in production
         // Pusher.logToConsole = true;
