@@ -1,0 +1,47 @@
+/* Vazirmatn Font - Persian/Arabic Font */
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/vazirmatn/Vazirmatn-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/vazirmatn/Vazirmatn-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/vazirmatn/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Apply to body when RTL or Persian is active */
+body.fa-lang,
+body[dir="rtl"],
+html[lang="fa"] body {
+    font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* Override all elements */
+body.fa-lang *,
+body[dir="rtl"] *,
+html[lang="fa"] body * {
+    font-family: 'Vazirmatn', sans-serif !important;
+}

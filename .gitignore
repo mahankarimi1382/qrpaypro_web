@@ -1,53 +1,8 @@
 ```
-# Dependencies
-node_modules/
-
 # Build artifacts
-dist/
-build/
-public/css/*.css
+public/css/vazir-fonts.css
 public/fonts/
 
-# Logs
-*.log
-
-# Environment
-.env
-.env.local
-.env.*
-
-# Editor
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-
-# Compiled
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
-
-# Testing
-.coverage
-coverage/
-htmlcov/
-
-# Temporary
-*.tmp
-*.temp
-*~
+# Fonts
+*.woff2
 ```
