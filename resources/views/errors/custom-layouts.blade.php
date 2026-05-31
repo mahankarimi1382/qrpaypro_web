@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @stack('title')
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <!-- Vazirmatn Persian Font -->
+    <link rel="stylesheet" href="{{ asset('css/vazir-fonts.css') }}">
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
     <style>
@@ -20,7 +19,7 @@
 
         .four-not-four-content .title {
             color: #ffffff;
-            font-family: "Josefin Sans", sans-serif;
+            font-family: "Vazirmatn", sans-serif;
             font-weight: 700;
         }
 

@@ -1,26 +1,53 @@
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
+```
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+public/css/*.css
+public/fonts/
+
+# Logs
+*.log
+
+# Environment
 .env
-.env.backup
-.env.production
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-auth.json
-npm-debug.log
-yarn-error.log
-/.fleet
-/.idea
-/.vscode
-# Sensitive files (Adding these to fix the Push Protection error)
-old/core/assets/admin/push_config.json
-database/seeders/Admin/GatewayApiSeeder.php
-database/seeders/Admin/PaymentGatewaySeeder.php
-database/seeders/Admin/VirtualApiSeeder.php
-old/assets/admin/push_config.json
-database/seeders/Admin/BasicSettingsSeeder.php
-database/seeders/Update/BasicSettingsSeeder.php
+.env.local
+.env.*
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Compiled
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Testing
+.coverage
+coverage/
+htmlcov/
+
+# Temporary
+*.tmp
+*.temp
+*~
+```
