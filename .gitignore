@@ -6,3 +6,4 @@ public/fonts/
 # Fonts
 *.woff2
 ```
+/database/seeders/
